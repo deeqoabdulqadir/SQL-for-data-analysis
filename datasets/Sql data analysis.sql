@@ -1,5 +1,6 @@
 create database mangodh;
 use mangodh
+---Database & Tables
 create table studuntes
 (
 students_id int,
@@ -17,7 +18,7 @@ emali varchar(23),
 salry int,
 departmants varchar(23)
 )
---- inser table one
+--- inser table one 
 INSERT INTO studuntes
 VALUES
 (1, 'Deqo', 23, '152626272', 92),
@@ -30,14 +31,85 @@ VALUES
 (8, 'Fadumo', 22, '152626278', 91),
 (9, 'Amal', 25, '152626279', 84),
 (10, 'Ifrah', 20, '152626280', 89);
--- table two
-insert into  teachar values
-(9,'ahmed',23,'ahmed@gmail.com','123','computer application');
 
-delate students_id from studuntes
+---  SELECT sooqaad name and score--
+
+SELECT name, score
+FROM studuntes;
+---- kaweyn 90 using where
+
+select *from studuntes
+where score> 90;
+
+SELECT *
+FROM studuntes
+WHERE stAge = 23;
+---using AND, OR, NOT oporaters--
+SELECT *
+FROM studuntes
+WHERE stAge > 20
+AND score > 90;
+
+SELECT *
+FROM studuntes
+WHERE stAge = 21
+OR stAge = 23;
+
+SELECT *
+FROM studuntes
+WHERE NOT stAge = 23;
+---Special Operators
+SELECT *
+FROM studuntes
+WHERE stAge IN (21, 22, 23);
+
+SELECT *
+FROM studuntes
+WHERE score BETWEEN 80 AND 100;
+
+SELECT *
+FROM studuntes
+WHERE name LIKE 'D%';
+
+----inser table two
+INSERT INTO teachar (t_id, t_name, emali, salry, departmants)
+VALUES (1, 'Ahmed', 'ahmed@gmail.com', 500, 'IT');
+
+INSERT INTO teachar (t_id, t_name, emali, salry, departmants)
+VALUES (2, 'Fatima', 'fatima@gmail.com', 600, 'Computer Science');
+
+INSERT INTO teachar (t_id, t_name, emali, salry, departmants)
+VALUES (3, 'Hassan', 'hassan@gmail.com', 550, 'Database');
+
+INSERT INTO teachar (t_id, t_name, emali, salry, departmants)
+VALUES (4, 'Amina', 'amina@gmail.com', 700, 'IT');
+
+INSERT INTO teachar (t_id, t_name, emali, salry, departmants)
+VALUES (5, 'Mohamed', 'mohamed@gmail.com', 650, 'Networking');
+
+INSERT INTO teachar (t_id, t_name, emali, salry, departmants)
+VALUES (6, 'Khadra', 'khadra@gmail.com', 750, 'Data Science');
+
+INSERT INTO teachar (t_id, t_name, emali, salry, departmants)
+VALUES (7, 'Yusuf', 'yusuf@gmail.com', 580, 'Computer Science');
+
+INSERT INTO teachar (t_id, t_name, emali, salry, departmants)
+VALUES (8, 'Maryan', 'maryan@gmail.com', 620, 'Database');
+
+INSERT INTO teachar (t_id, t_name, emali, salry, departmants)
+VALUES (9, 'Abdi', 'abdi@gmail.com', 800, 'Data Science');
+
+INSERT INTO teachar (t_id, t_name, emali, salry, departmants)
+VALUES (10, 'Hodan', 'hodan@gmail.com', 670, 'Networking');
+
+COMMIT;
  
  select *from studuntes
  select name,stAge from studuntes
+ select *from  teachar
+  
+
+  
   
 
   
